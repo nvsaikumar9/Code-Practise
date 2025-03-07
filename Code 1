@@ -1,0 +1,19 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+def valid(Mobile):
+    
+    if len(Mobile) == 10 and (Mobile[0] == '7' or Mobile[0] == '8' or Mobile[0] == '9'):
+        Count = 0
+        for i in Mobile :
+            if i.isnumeric():
+                Count += 1
+        if Count == 10:
+            print('YES')
+        else:
+            print('NO')
+    else:
+        print('NO')
+        
+for _ in range(0,int(input())):
+    a = input()
+    valid(str(a))
